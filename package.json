@@ -1,0 +1,13 @@
+{
+  "name": "pemira-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  },
+  "scripts": {
+    "dev": "tailwindcss -i ./src/css/input.css -o ./dist/assets/css/app.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./dist/assets/css/app.css --minify"
+  }
+}

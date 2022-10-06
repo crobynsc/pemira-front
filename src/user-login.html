@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pemira</title>
+
+    <link rel="stylesheet" href="../dist/assets/css/app.css">
+    <!-- Alphinejs -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="h-screen flex flex-col justify-center">
+        <div class="flex flex-col lg:flex-row h-screen bg-black">
+            <div class="flex h-full justify-left md:justify-center items-start md:items-center w-full bg-landing bg-center bg-cover">
+                <img src="../dist/assets/images/logo_x2.png" alt="logo" class="w-32 mt-10 ml-6 md:w-40">
+            </div>
+            <div class="flex flex-col bg-white w-full lg:w-1/2 justify-left md:justify-between items-start md:items-center">
+                <!-- Form Login -->
+                <div class="px-5 py-9 flex flex-col justify-center h-full w-full md:w-[80%] md:items-center items-start">
+                    <h1 class="text-5xl font-bold font-inter700 md:uppercase mb-3">
+                        Login
+                    </h1>
+                    <form action="/" method="POST" class="w-full">
+                        <div class="flex items-center my-3">
+                            <label for="nim" class="font-inter700 w-9">
+                                <svg class="w-18 h-18" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 0C8.01109 0 7.04439 0.293245 6.22215 0.842652C5.3999 1.39206 4.75904 2.17295 4.3806 3.08658C4.00216 4.00021 3.90315 5.00555 4.09607 5.97545C4.289 6.94536 4.7652 7.83627 5.46447 8.53553C6.16373 9.2348 7.05464 9.711 8.02455 9.90393C8.99445 10.0969 9.99979 9.99784 10.9134 9.6194C11.827 9.24096 12.6079 8.6001 13.1573 7.77785C13.7068 6.95561 14 5.98891 14 5C14 3.67392 13.4732 2.40215 12.5355 1.46447C11.5979 0.526784 10.3261 0 9 0ZM9 8C8.40666 8 7.82664 7.82405 7.33329 7.49441C6.83994 7.16476 6.45542 6.69623 6.22836 6.14805C6.0013 5.59987 5.94189 4.99667 6.05764 4.41473C6.1734 3.83279 6.45912 3.29824 6.87868 2.87868C7.29824 2.45912 7.83279 2.1734 8.41473 2.05764C8.99667 1.94189 9.59987 2.0013 10.1481 2.22836C10.6962 2.45542 11.1648 2.83994 11.4944 3.33329C11.8241 3.82664 12 4.40666 12 5C12 5.79565 11.6839 6.55871 11.1213 7.12132C10.5587 7.68393 9.79565 8 9 8ZM18 19V18C18 16.1435 17.2625 14.363 15.9497 13.0503C14.637 11.7375 12.8565 11 11 11H7C5.14348 11 3.36301 11.7375 2.05025 13.0503C0.737498 14.363 0 16.1435 0 18V19H2V18C2 16.6739 2.52678 15.4021 3.46447 14.4645C4.40215 13.5268 5.67392 13 7 13H11C12.3261 13 13.5979 13.5268 14.5355 14.4645C15.4732 15.4021 16 16.6739 16 18V19H18Z"
+                                        fill="black" fill-opacity="0.38" />
+                                </svg>
+                            </label>
+                            <input type="text" name="nim" id="nim" class="border-b-2 pb-1 border-gray-300 my-2 focus:outline-none focus:border-[#1C1B5D] w-full" placeholder="NIM" required>
+                        </div>
+                        <div class="flex items-center">
+                            <label for="password" class="font-inter700 w-9">
+                                <svg width="21" height="21" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                    <path id="svg_1" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke-opacity="0.38" stroke="black"
+                                        d="m14,1c-0.9784,0.00002 -1.9436,0.22523 -2.8209,0.65818c-0.8774,0.43295 -1.64332,1.06202 -2.23852,1.83851c-0.59519,0.77648 -1.00369,1.67954 -1.19385,2.63924c-0.19015,0.9597 -0.15687,1.9503 0.09727,2.89507l-6.219,6.219l0,4.5l4.5,0l0,-2.25l2.25,0l0,-2.25l2.25,0l1.725,-1.725c0.5385,0.147 1.092,0.222 1.65,0.225c1.6908,0 3.3123,-0.6716 4.5078,-1.8672c1.1956,-1.1955 1.8672,-2.81704 1.8672,-4.5078c0,-1.69076 -0.6716,-3.31226 -1.8672,-4.50781c-1.1955,-1.19554 -2.817,-1.86719 -4.5078,-1.86719l0,0z" />
+                                    <path id="svg_5"
+                                        d="m14,8.69414c-0.873,0 -1.6456,-0.70713 -1.6456,-1.58013c0,-0.873 0.70713,-1.58014 1.58013,-1.58014c0.873,0 1.58013,0.70714 1.58013,1.58014c0,0.873 -0.64166,1.58013 -1.51466,1.58013z"
+                                        opacity="undefined" stroke-opacity="0.38" stroke-width="1.5" stroke="black" fill="none" />
+                                </svg>
+                            </label>
+                            <div class="relative w-full cursor-pointer" x-data="{ show: true }">
+                                <input :type="show ? 'password' : 'text'" name="password" id="password" class="pb-1 border-b-2 border-gray-300 my-2 focus:outline-none focus:border-[#1C1B5D] w-full"
+                                    required placeholder="Password">
+                                <!-- Eye Show -->
+                                <svg @click="show = !show" :class="{'hidden': !show, 'block':show }" class="text-gray-400 font-semibold absolute inset-y-2 right-0 scale-x-110" width="34" height="28"
+                                    fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 23 16">
+                                    <path
+                                        d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+                                    <path
+                                        d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+                                    <path
+                                        d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+                                </svg>
+                                <!-- Eye Hide -->
+                                <svg @click="show = !show" :class="{'block': !show, 'hidden':show }" class="text-gray-400 font-semibold absolute inset-y-3 space-x-110 right-1" width="34" height="24"
+                                    fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="text-gray-500/90 my-7 w-full">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <button type="submit"
+                            class="bg-gradient-to-r from-[#FF032C] via-[#1C1B5D] to-[#1C1B5D] tracking-wide text-white px-8 py-3 rounded-md font-semibold hover:scale-105 transition duration-200 w-full">
+                            Masuk
+                        </button>
+                    </form>
+                </div>
+                <footer class="w-full">
+                    <div class="flex justify-center items-center bg-[#1C1B5D] text-gray-400/70 py-3 sticky bottom-0 font-semibold w-full">
+                        <p class="text-xs">PEMIRA 2022 X VENDOR</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

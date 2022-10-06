@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemira - Vote</title>
+
+    <link rel="stylesheet" href="../dist/assets/css/app.css">
+    <!-- Alphinejs -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Sweet Alert 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="lg:items-center flex flex-col justify-between w-full bg-white">
+        <div class="lg:w-1/3 lg:border-l lg:border-r h-full">
+            <nav class="bg-landing flex items-center justify-between px-5 py-2 -mt-1 bg-top bg-cover">
+                <a href="user-dashboard.html" class="px-3 py-2 my-6 scale-125 rounded-lg">
+                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.292893 8.70711C-0.097631 8.31658 -0.097631 7.68342 0.292893 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41421 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292893 8.70711ZM3 9H1V7H3V9Z"
+                            fill="white" />
+                    </svg>
+                </a>
+                <div class="w-full mx-auto text-center text-white">
+                    <h1 class="-ml-9 text-lg font-semibold capitalize">Gunakan Suara</h1>
+                </div>
+            </nav>
+            <!-- Main Menu -->
+            <div class="flex flex-col h-full min-h-screen p-5 space-y-5">
+                <div class="font-inter700 py-2 text-center text-gray-500 capitalize bg-gray-300 rounded-md">
+                    Pilih salah satu kandidat
+                </div>
+                <!-- Start Paslon -->
+                <div class="hover:shadow-lg flex justify-between p-3 py-5 transition duration-100 border-2 rounded-lg shadow-sm">
+                    <div class="flex items-center align-middle">
+                        <div class="w-24 h-24 rounded-lg">
+                            <img src="../dist/assets/images/bg-landing.png" alt="" class="w-24 h-24 rounded-lg">
+                        </div>
+                        <div class="w-auto ml-5">
+                            <h2 class="font-semibold">Pasangan Calon 1</h2>
+                            <p class="text-xs text-gray-500 uppercase">
+                                John Doe Lorem, ipsum dolor.
+                            </p>
+                            <p class="text-xs text-gray-500 uppercase">
+                                Lesti Kejora
+                            </p>
+                            <button type="button" data-paslon="1" onclick="pilihKandidat(this)"
+                                class="pilih hover:scale-110 transition duration-300 text-sm uppercase py-1 px-3 my-2 w-20 font-semibold tracking-wider rounded-lg bg-gradient-to-r from-[#FF032C] via-[#1C1B5D] to-[#1C1B5D] text-white text-center">
+                                Pilih
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Paslon -->
+                <!-- Start Paslon -->
+                <div class="hover:shadow-lg flex justify-between p-3 py-5 transition duration-100 border-2 rounded-lg shadow-sm">
+                    <div class="flex items-center align-middle">
+                        <div class="w-24 h-24 rounded-lg">
+                            <img src="../dist/assets/images/bg-landing.png" alt="" class="w-24 h-24 rounded-lg">
+                        </div>
+                        <div class="w-auto ml-5">
+                            <h2 class="font-semibold">Pasangan Calon 1</h2>
+                            <p class="text-xs text-gray-500 uppercase">
+                                John Doe Lorem, ipsum dolor.
+                            </p>
+                            <p class="text-xs text-gray-500 uppercase">
+                                Lesti Kejora
+                            </p>
+                            <button type="button" data-paslon="2" onclick="pilihKandidat(this)"
+                                class="pilih hover:scale-110 transition duration-300 text-sm uppercase py-1 px-3 my-2 w-20 font-semibold tracking-wider rounded-lg bg-gradient-to-r from-[#FF032C] via-[#1C1B5D] to-[#1C1B5D] text-white text-center">
+                                Pilih
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Paslon -->
+                <!-- Start Paslon -->
+                <div class="hover:shadow-lg flex justify-between p-3 py-5 transition duration-100 border-2 rounded-lg shadow-sm">
+                    <div class="flex items-center align-middle">
+                        <div class="w-24 h-24 rounded-lg">
+                            <img src="../dist/assets/images/bg-landing.png" alt="" class="w-24 h-24 rounded-lg">
+                        </div>
+                        <div class="w-auto ml-5">
+                            <h2 class="font-semibold">Pasangan Calon 1</h2>
+                            <p class="text-xs text-gray-500 uppercase">
+                                John Doe Lorem, ipsum dolor.
+                            </p>
+                            <p class="text-xs text-gray-500 uppercase">
+                                Lesti Kejora
+                            </p>
+                            <button type="button" data-paslon="3" onclick="pilihKandidat(this)"
+                                class="pilih hover:scale-110 transition duration-300 text-sm uppercase py-1 px-3 my-2 w-20 font-semibold tracking-wider rounded-lg bg-gradient-to-r from-[#FF032C] via-[#1C1B5D] to-[#1C1B5D] text-white text-center">
+                                Pilih
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Paslon -->
+            </div>
+            <footer class="w-full">
+                <div class="flex justify-center items-center bg-[#1C1B5D] text-gray-400/70 py-3 font-semibold w-full">
+                    <p class="mx-16 text-xs">PEMIRA 2022 X VENDOR</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        function pilihKandidat(d) {
+            let getData = d.getAttribute('data-paslon');
+            console.log(getData);
+            // sweet alert here
+            Swal.fire({
+                title: 'Apakah anda yakin?',
+                text: "Anda tidak dapat mengubah pilihan anda setelah memilih!\n\nAnda akan memilih pasangan calon " + getData,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya, pilih Pasangan ' + getData
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Terimakasih!',
+                        'Pilihan anda telah kami terima.',
+                        'success'
+                    )
+                    // redirect to dashboard
+                    setTimeout(() => {
+                        window.location.href = "user-dashboard.html";
+                    }, 2000);
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
