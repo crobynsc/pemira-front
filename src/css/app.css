@@ -1639,6 +1639,10 @@ html {
     margin-left: 20rem;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:hidden {
     display: none;
   }
