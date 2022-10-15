@@ -38,7 +38,7 @@
                                     fill="black" fill-opacity="0.38" />
                             </svg>
                         </label>
-                        <input type="text" name="nim" id="nim" class="border-b-2 pb-1 border-gray-300 my-2 focus:outline-none focus:border-[#1C1B5D] w-full" placeholder="NIM" required>
+                        <input type="text" name="nim" id="nim" class="border-b-2 pb-1 border-gray-300 my-2 focus:outline-none focus:border-[#1C1B5D] w-full rounded-md" placeholder="NIM" required>
                     </div>
                     <div class="flex items-center">
                         <label for="password" class="font-inter700 w-9">
@@ -51,8 +51,8 @@
                             </svg>
                         </label>
                         <div class="relative w-full cursor-pointer" x-data="{ show: true }">
-                            <input :type="show ? 'password' : 'text'" name="password" id="password" class="pb-1 border-b-2 border-gray-300 my-2 focus:outline-none focus:border-[#1C1B5D] w-full"
-                                required placeholder="Password">
+                            <input :type="show ? 'password' : 'text'" name="password" id="password"
+                                class="rounded-md pb-1 border-b-2 border-gray-300 my-2 focus:outline-none focus:border-[#1C1B5D] w-full" required placeholder="Password">
                             <!-- Eye Show -->
                             <svg @click="show = !show" :class="{'hidden': !show, 'block':show }" class="inset-y-2 absolute right-0 font-semibold text-gray-400 scale-x-110" width="34" height="28"
                                 fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 23 16">
