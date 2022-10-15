@@ -79,7 +79,7 @@
     <!-- End sidebar -->
     <div class="lg:ml-80 w-auto min-h-screen bg-gray-200">
         <header class="fixed z-[1] flex items-center justify-between w-full h-16 px-5 bg-white shadow">
-            <div class="text-2xl font-semibold">Overview</div>
+            <div class="text-2xl font-semibold capitalize">Ubah data mahasiswa</div>
             <svg class="m-2 cursor-pointer" id="button-menu" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                     d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
@@ -87,64 +87,44 @@
         </header>
         <div class="flex flex-col justify-between min-h-screen">
             <div class=" p-8 pt-24">
-                <div class="mb-7 hidden w-auto h-auto p-3 bg-red-300 border border-red-500 rounded-md">
-                    <h4 class="text-md capitalize">belum ada calon, silahkan tambahkan data pasangan calon terlebih dahulu.</h4>
+                <div class="w-auto h-auto p-3 mb-3 bg-blue-100 border border-blue-500 rounded-md">
+                    <h4 class="text-md capitalize">Reynaldi kasano</h4>
                 </div>
-                <div class="lg:grid-cols-3 md:gap-4 grid grid-rows-3 gap-10">
-                    <div class="hover:scale-95 flex justify-center w-auto h-auto pb-3 transition duration-300 bg-white rounded-md">
-                        <div class="w-14 h-14 absolute flex items-center justify-center -mt-5 bg-white rounded-full">
-                            <h1 class="relative text-3xl font-bold">1</h1>
-                        </div>
-                        <div class="p-2">
-                            <img src="images/SpongeBob-S12-duo.jpg" alt="Paslon 1" class="object-cover h-56 rounded-md">
-                            <h5 class="text-md px-3 mx-auto mt-3 font-semibold text-center uppercase">Pasangan Calon 1</h5>
-                            <div class="flex items-center justify-center my-2">
-                                <svg class="text-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-                                </svg>
-                                <span class="ml-2">1251</span>
+                <div class="p-4 bg-white rounded-lg">
+                    <!-- create form edit data mahasiswa -->
+                    <form action="#">
+                        <div class="gap-x-5 grid grid-cols-2">
+                            <div class="mb-3">
+                                <label for="nama" class="block mb-2 text-sm font-medium text-gray-600">Nama</label>
+                                <input type="text" name="nama" id="nama" placeholder="Nama"
+                                    class="focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-md"
+                                    value="Kumar Singh">
                             </div>
-                            <div class="flex justify-center">
-                                <a href="admin-data-paslon.html" class="px-3 py-1 text-white bg-black rounded-md">Edit data</a>
+                            <div class="mb-3">
+                                <label for="nim" class="block mb-2 text-sm font-medium text-gray-600">NIM</label>
+                                <input type="text" name="nim" id="nim" placeholder="NIM"
+                                    class="focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-md"
+                                    value="1123456789">
                             </div>
-                        </div>
-                    </div>
-                    <div class="hover:scale-95 flex justify-center w-auto h-auto pb-3 transition duration-300 bg-white rounded-md">
-                        <div class="w-14 h-14 absolute flex items-center justify-center -mt-5 bg-white rounded-full">
-                            <h1 class="relative text-3xl font-bold">2</h1>
-                        </div>
-                        <div class="p-2">
-                            <img src="images/mermaid-barnackle.jpg" alt="Paslon 2" class="object-cover h-56 rounded-md">
-                            <h5 class="text-md px-3 mx-auto mt-3 font-semibold text-center uppercase">Pasangan Calon 2</h5>
-                            <div class="flex items-center justify-center my-2">
-                                <svg class="text-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-                                </svg>
-                                <span class="ml-2">2541</span>
+                            <div class="mb-3">
+                                <label for="jurusan" class="block mb-2 text-sm font-medium text-gray-600">Prodi</label>
+                                <input type="text" name="jurusan" id="jurusan" placeholder="Teknik kayang"
+                                    class="focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-md">
                             </div>
-                            <div class="flex justify-center">
-                                <a href="admin-data-paslon.html" class="px-3 py-1 text-white bg-black rounded-md">Edit data</a>
+                            <div class="mb-3">
+                                <label for="password" class="block mb-2 text-sm font-medium text-gray-600">Kata sandi</label>
+                                <input type="password" name="password" id="password" placeholder="Password"
+                                    class="focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-md">
                             </div>
                         </div>
-                    </div>
-                    <div class="hover:scale-95 flex justify-center w-auto h-auto pb-3 transition duration-300 bg-white rounded-md">
-                        <div class="w-14 h-14 absolute flex items-center justify-center -mt-5 bg-white rounded-full">
-                            <h1 class="relative text-3xl font-bold">3</h1>
+                        <!-- button update -->
+                        <div class="flex justify-end mt-4">
+                            <button type="submit"
+                                class="active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg">
+                                Update data
+                            </button>
                         </div>
-                        <div class="p-2">
-                            <img src="images/wumbleton.jpg" alt="Paslon 3" class="object-cover h-56 rounded-md">
-                            <h5 class="text-md px-3 mx-auto mt-3 font-semibold text-center uppercase">Pasangan Calon 3</h5>
-                            <div class="flex items-center justify-center my-2">
-                                <svg class="text-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-                                </svg>
-                                <span class="ml-2">1128</span>
-                            </div>
-                            <div class="flex justify-center">
-                                <a href="admin-data-paslon.html" class="px-3 py-1 text-white bg-black rounded-md">Edit data</a>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <footer>

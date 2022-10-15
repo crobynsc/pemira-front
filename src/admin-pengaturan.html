@@ -86,65 +86,38 @@
             </svg>
         </header>
         <div class="flex flex-col justify-between min-h-screen">
-            <div class=" p-8 pt-24">
-                <div class="mb-7 hidden w-auto h-auto p-3 bg-red-300 border border-red-500 rounded-md">
-                    <h4 class="text-md capitalize">belum ada calon, silahkan tambahkan data pasangan calon terlebih dahulu.</h4>
+            <div class="p-8 pt-24">
+                <div class="p-5 mb-5 bg-white rounded-lg">
+                    <form action="#">
+                        <!-- set countdown pemira -->
+                        <div class="mb-3">
+                            <label for="waktu_pemilu" class="block mb-2 text-sm font-medium text-gray-600">Waktu Pemilihan</label>
+                            <input type="datetime-local" id="waktu_pemilu" name="waktu_pemilu"
+                                class="focus:outline-none focus:bg-white focus:border-gray-500 w-full px-3 py-2 text-sm text-gray-700 bg-gray-200 border border-gray-200 rounded-md" />
+                        </div>
+                        <div class="flex justify-end mt-4">
+                            <button type="submit"
+                                class="active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg">
+                                Simpan Perubahan
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="lg:grid-cols-3 md:gap-4 grid grid-rows-3 gap-10">
-                    <div class="hover:scale-95 flex justify-center w-auto h-auto pb-3 transition duration-300 bg-white rounded-md">
-                        <div class="w-14 h-14 absolute flex items-center justify-center -mt-5 bg-white rounded-full">
-                            <h1 class="relative text-3xl font-bold">1</h1>
+                <div class="p-5 mb-5 bg-white rounded-lg">
+                    <form action="#">
+                        <!-- set countdown pemira -->
+                        <div class="mb-3">
+                            <label for="list_mahasiswa" class="block mb-2 text-sm font-medium text-gray-600 capitalize">Batch input mahasiswa data CSV</label>
+                            <input type="file" id="list_mahasiswa" name="list_mahasiswa"
+                                class="focus:outline-none focus:bg-white focus:border-gray-500 w-full px-3 py-2 text-sm text-gray-700 bg-gray-200 border border-gray-200 rounded-md" />
                         </div>
-                        <div class="p-2">
-                            <img src="images/SpongeBob-S12-duo.jpg" alt="Paslon 1" class="object-cover h-56 rounded-md">
-                            <h5 class="text-md px-3 mx-auto mt-3 font-semibold text-center uppercase">Pasangan Calon 1</h5>
-                            <div class="flex items-center justify-center my-2">
-                                <svg class="text-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-                                </svg>
-                                <span class="ml-2">1251</span>
-                            </div>
-                            <div class="flex justify-center">
-                                <a href="admin-data-paslon.html" class="px-3 py-1 text-white bg-black rounded-md">Edit data</a>
-                            </div>
+                        <div class="flex justify-end mt-4">
+                            <button type="submit"
+                                class="active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg">
+                                Upload Data
+                            </button>
                         </div>
-                    </div>
-                    <div class="hover:scale-95 flex justify-center w-auto h-auto pb-3 transition duration-300 bg-white rounded-md">
-                        <div class="w-14 h-14 absolute flex items-center justify-center -mt-5 bg-white rounded-full">
-                            <h1 class="relative text-3xl font-bold">2</h1>
-                        </div>
-                        <div class="p-2">
-                            <img src="images/mermaid-barnackle.jpg" alt="Paslon 2" class="object-cover h-56 rounded-md">
-                            <h5 class="text-md px-3 mx-auto mt-3 font-semibold text-center uppercase">Pasangan Calon 2</h5>
-                            <div class="flex items-center justify-center my-2">
-                                <svg class="text-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-                                </svg>
-                                <span class="ml-2">2541</span>
-                            </div>
-                            <div class="flex justify-center">
-                                <a href="admin-data-paslon.html" class="px-3 py-1 text-white bg-black rounded-md">Edit data</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hover:scale-95 flex justify-center w-auto h-auto pb-3 transition duration-300 bg-white rounded-md">
-                        <div class="w-14 h-14 absolute flex items-center justify-center -mt-5 bg-white rounded-full">
-                            <h1 class="relative text-3xl font-bold">3</h1>
-                        </div>
-                        <div class="p-2">
-                            <img src="images/wumbleton.jpg" alt="Paslon 3" class="object-cover h-56 rounded-md">
-                            <h5 class="text-md px-3 mx-auto mt-3 font-semibold text-center uppercase">Pasangan Calon 3</h5>
-                            <div class="flex items-center justify-center my-2">
-                                <svg class="text-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-                                </svg>
-                                <span class="ml-2">1128</span>
-                            </div>
-                            <div class="flex justify-center">
-                                <a href="admin-data-paslon.html" class="px-3 py-1 text-white bg-black rounded-md">Edit data</a>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <footer>

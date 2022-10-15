@@ -9,5 +9,8 @@
   "scripts": {
     "dev": "tailwindcss -i ./src/css/input.css -o ./src/css/app.css --watch",
     "build": "tailwindcss -i ./src/css/input.css -o ./src/css/app.css --minify"
+  },
+  "dependencies": {
+    "flowbite": "^1.5.3"
   }
 }
